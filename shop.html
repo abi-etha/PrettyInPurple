@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Pretty in Purple Boutique</title>
+<meta name="description" content="Browse jewelry, accessories, and seasonal drops from Pretty in Purple Boutique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="nav-logo">
+      <svg class="bow-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 28c0-8-10-16-20-16-4 0-6 3-6 6 0 9 12 14 20 16-8 2-20 7-20 16 0 3 2 6 6 6 10 0 20-8 20-16" stroke="#5c3a78" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M32 28c0-8 10-16 20-16 4 0 6 3 6 6 0 9-12 14-20 16 8 2 20 7 20 16 0 3-2 6-6 6-10 0-20-8-20-16" stroke="#5c3a78" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="32" cy="28" r="5" fill="#5c3a78"/>
+      </svg>
+      Pretty in Purple
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <button class="nav-cart-btn">🛍️ Inquiry <span class="cart-count">0</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" style="padding: 50px 24px 20px;">
+  <h1 class="hero-title" style="font-size: 3rem;">Shop</h1>
+  <p class="hero-tagline">Every piece is handpicked — add your favorites to an inquiry list, no account or payment needed.</p>
+</section>
+
+<section class="section" style="padding-top: 10px;">
+  <div class="container">
+    <div class="filters" id="filters"></div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-hearts">💜 🤍 💜</div>
+  <p>&copy; <span id="year"></span> Pretty in Purple Boutique. Handmade with love.</p>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-header">
+    <h3 style="margin:0;">Your Inquiry List 🎀</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <p class="cart-note">No payment happens here — just add what catches your eye and send an inquiry. We'll follow up by email!</p>
+    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Send Inquiry 💌</a>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
